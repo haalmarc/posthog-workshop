@@ -4,10 +4,16 @@ Workshop for å lære posthog.
 
 ## Getting Started
 
-First, run the development server:
+### Setup
+
+Legg inn .env-variabler, se .env.local.example. Legg til .env.local
+
+### Kjør lokalt
+
+Kjør prosjektet lokalt:
 
 ```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Åpne [http://localhost:3000](http://localhost:3000).
