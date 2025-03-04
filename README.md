@@ -56,7 +56,7 @@ Når "Verify installation" er good, kan du trykke videre til "Continue".
 
 Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer.
 
-👉 Track hvilke FAQ- spørsmål som brukere åpner.
+👉 Track hvilke FAQ- spørsmål som brukere åpner. For å se om eventet har blitt sendt, kan du trykke inn på fanen "Activity".
 
 💡 https://posthog.com/docs/getting-started/send-events
 
