@@ -91,7 +91,7 @@ export default function BlogAndFAQ() {
             </div>
             <div className="mx-auto max-w-3xl space-y-8 py-12">
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
+                <AccordionItem value="how-to-create-account">
                   <AccordionTrigger>
                     How do I create an account?
                   </AccordionTrigger>
@@ -103,7 +103,7 @@ export default function BlogAndFAQ() {
                     activate your account.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-2">
+                <AccordionItem value="accepted-payment-methods">
                   <AccordionTrigger>
                     What payment methods do you accept?
                   </AccordionTrigger>
@@ -114,7 +114,7 @@ export default function BlogAndFAQ() {
                     invoice-based payments with net-30 terms.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-3">
+                <AccordionItem value="reset-password">
                   <AccordionTrigger>
                     How can I reset my password?
                   </AccordionTrigger>
@@ -126,7 +126,7 @@ export default function BlogAndFAQ() {
                     valid for 24 hours.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-4">
+                <AccordionItem value="refund-policy">
                   <AccordionTrigger>Do you offer refunds?</AccordionTrigger>
                   <AccordionContent>
                     Yes, we offer a 30-day money-back guarantee for all our
@@ -136,7 +136,7 @@ export default function BlogAndFAQ() {
                     refund process.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-5">
+                <AccordionItem value="contact-support">
                   <AccordionTrigger>
                     How can I contact customer support?
                   </AccordionTrigger>
