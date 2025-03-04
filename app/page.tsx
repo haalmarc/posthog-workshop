@@ -18,39 +18,6 @@ import { Button } from "@/components/ui/button";
 export default function BlogAndFAQ() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center">
-          <Link href="/" className="font-bold text-xl">
-            YourBrand
-          </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <Link
-              href="#blog"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Blog
-            </Link>
-            <Link
-              href="#faq"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              FAQ
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              About
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
