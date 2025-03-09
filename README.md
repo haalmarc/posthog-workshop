@@ -58,43 +58,20 @@ Når "Verify installation" er good, kan du trykke videre til "Continue".
 
 ### Oppgave 1b - Ditt første event
 
+![Screenshot workshop](./images/first_click.png)
+
 Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer.
 
-👉 Track hvilke FAQ- spørsmål som brukere åpner. For å se om eventet har blitt sendt, kan du trykke inn på fanen "Activity".
+👉 Oppgave: Track hvilke FAQ- spørsmål som brukere åpner. For å se om eventet har blitt sendt, kan du trykke inn på fanen "Activity".
 
 📖 https://posthog.com/docs/getting-started/send-events
 
-<details>
-  <summary>
-    Løsning
-  </summary>
+💡 Refleksjon:
 
-Sett use-client direktivet for å sende event, og lag en funksjon:
+- Hvilke events bør du minimum tracke?
 
-```
-'use client'
-import posthog from "posthog-js";
+📖 https://posthog.com/tutorials/next-steps-after-installing#1-configure-event-capture
 
-function trackFAQEvent(section: string) {
-  posthog.capture("faq_section_clicked", { section });
-}
-```
-
-som du så kaller ved åpning av accordion:
-
-```
-<Accordion
-  type="single"
-  collapsible
-  className="w-full"
-  onValueChange={(value) => {
-    trackFAQEvent(value);
-  }}
->
-```
-
-</details>
-
-💡 Refleksjon: Hva må du gjøre annerledes om du vil tracke fra en serverkomponent versus klientkomponent?
+- Hva må du gjøre annerledes om du vil tracke fra en serverkomponent versus klientkomponent?
 
 📖 https://vercel.com/guides/posthog-nextjs-vercel-feature-flags-analytics#3.-using-posthog-with-react-server-components
