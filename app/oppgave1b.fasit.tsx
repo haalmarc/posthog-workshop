@@ -1,4 +1,11 @@
-"use client"; // 👈 La til use-client-direktiv for å sende med event på accordion
+"use client";
+/* 
+  ☝ La til use-client-direktiv for å sende med event på accordion
+  
+  Siden det bare er FAQ som bruker interaktivitet,
+  hadde det vært nok å ekstrahere ut FAQ til egen komponent,
+  for å la resten av siden være serverkomponent.
+*/
 
 import Link from "next/link";
 import Image from "next/image";
@@ -19,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import posthog from "posthog-js";
 
 export default function BlogAndFAQ() {
-  // 👇 Ved klikk på accordion, sender med hvilken seksjon det gjelder til posthog
+  // 👇 Ved klikk på accordion, sender med hvilken seksjon det gjelder
   function trackFAQEvent(section: string) {
     posthog.capture("faq_section_clicked", { section });
   }

@@ -75,3 +75,52 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 - Hva må du gjøre annerledes om du vil tracke fra en serverkomponent versus klientkomponent?
 
 📖 https://vercel.com/guides/posthog-nextjs-vercel-feature-flags-analytics#3.-using-posthog-with-react-server-components
+
+## Oppgave 2 - Visualiser innsikt
+
+## Oppgave 2a - Trender
+
+![Screenshot workshop](./images/trend.png)
+
+👉 Oppgave: Legg til en trend-annotasjon.
+
+💡 Refleksjon: Hva er vits med å lage trender?
+
+📖 https://www.bekk.christmas/post/2024/07/forsta-produktet-ditt-med-posthog-lag-innsikt-ut-av-malingene
+
+## Oppgave 2b - Funnels
+
+![Screenshot workshop](./images/funnel.png)
+
+👉 Oppgave: Sett opp en funnel for skjemaet
+
+- I koden, legg inn et event per spørsmål i skjemaet
+- I dashboard, legg inn action per steg
+
+<details>
+  <summary>Løsning dashboard</summary>
+
+![Screenshot workshop](./images/funnel_solution.png)
+
+</details>
+
+💡 Refleksjon:
+
+- Om du ser dropp i prosenter per steg, hva er det tegn på - og hva kan du eventuelt gjøre med det?
+- Hvordan kan du bruke funnels sammen med retention?
+
+📖 https://www.youtube.com/watch?v=2jQco8hEvTI&t=573s&ab_channel=PostHog
+
+# Ekstra oppgaver
+
+## Identifisér brukeren
+
+Legg til et skjema hvor brukeren kan skrive inn epost, og følg deretter brukeren for å identifisere hen. Se https://posthog.com/tutorials/identifying-users-guide og video https://youtu.be/LIJ_TuyMq74?si=fukxQhy67JZSjYPf&t=290
+
+## Track uten behov for cookie-banner
+
+Om du ikke vil lagre brukerens info i cookies, kan du flytte lagringen. Prøv det ut: https://posthog.com/tutorials/cookieless-tracking
+
+## Test med posthog
+
+Lag en test med Jest og Posthog: https://posthog.com/tutorials/test-frontend-feature-flags
