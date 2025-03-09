@@ -78,7 +78,7 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 ## Oppgave 2 - Visualiser innsikt
 
-## Oppgave 2a - Trender
+### Oppgave 2a - Trender
 
 ![Screenshot workshop](./images/trend.png)
 
@@ -88,11 +88,11 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 📖 https://www.bekk.christmas/post/2024/07/forsta-produktet-ditt-med-posthog-lag-innsikt-ut-av-malingene
 
-## Oppgave 2b - Funnels
+### Oppgave 2b - Funnels
 
 ![Screenshot workshop](./images/funnel.png)
 
-👉 Oppgave: Sett opp en funnel for skjemaet
+👉 Oppgave: Sett opp en funnel for skjemaet du finner oppe i høyre hjørne på nettsiden.
 
 - I koden, legg inn et event per spørsmål i skjemaet
 - I dashboard, legg inn action per steg
@@ -110,6 +110,21 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 - Hvordan kan du bruke funnels sammen med retention?
 
 📖 https://www.youtube.com/watch?v=2jQco8hEvTI&t=573s&ab_channel=PostHog
+
+## Lag et dashboard
+
+### Oppgave 3a - Lag et dashboard
+
+![Screenshot workshop](./images/dashboard.png)
+
+👉 Legg inn dashboardene du lagde i oppgave 2 inn på et nytt dashboard
+
+💡 Refleksjon:
+
+- Hva er gode praksiser så dashboardet blir oversiktlig?
+- Om dette var et dashboard for ditt oppdrag, hva hadde du ønsket å ha med?
+
+📖 https://www.bekk.christmas/post/2024/08/forsta-produktet-ditt-med-posthog-samle-innsikt-i-produkt-dashboard
 
 # Ekstra oppgaver
 
