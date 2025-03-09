@@ -126,6 +126,38 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 📖 https://www.bekk.christmas/post/2024/08/forsta-produktet-ditt-med-posthog-samle-innsikt-i-produkt-dashboard
 
+## Lag et eksperiment
+
+### Oppgave 4a - Feature flagg
+
+👉 Gå inn på Experiments og opprett nytt eksperiment. Generer samtidig nytt feature flagg
+
+💡 Refleksjon:
+
+- Hva har eksperimenter med feature flags å gjøre?
+- Hvordan ville du ha lagt til et feature flagg som kun én person kunne se?
+
+📖 Lesestoff:
+
+- https://posthog.com/docs/experiments/creating-an-experiment
+- https://youtu.be/2jQco8hEvTI?si=0946ThlaQu1FN2m_&t=776
+
+### Oppgave 4b - A/b- test
+
+💡 Refleksjon:
+
+- Hvordan kan du være sikker på at en åpen accordion faktisk genererer flere besøk til /funnel?
+- Hvilke eksperimenter kan du gjøre på eget oppdrag?
+
+📖 https://www.bekk.christmas/post/2024/09/forst%C3%A5-produktet-ditt-med-posthog-hypoteser
+
+### Oppgave 4b - A/b- testing
+
+📖 Lesestoff:
+
+- https://www.youtube.com/watch?v=2jQco8hEvTI&t=847s&ab_channel=PostHog
+- https://www.bekk.christmas/post/2024/09/forst%C3%A5-produktet-ditt-med-posthog-hypoteser
+
 # Ekstra oppgaver
 
 ## Identifisér brukeren

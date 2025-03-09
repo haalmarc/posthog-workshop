@@ -1,12 +1,4 @@
 "use client";
-/* 
-  ☝ La til use-client-direktiv for å sende med event på accordion
-
-  Siden det bare er FAQ som bruker interaktivitet,
-  hadde det vært nok å ekstrahere ut FAQ til egen komponent,
-  for å la resten av siden være serverkomponent.
-*/
-
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -24,9 +16,19 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import posthog from "posthog-js";
+import { useEffect, useState } from "react";
+import { useFeatureFlagVariantKey } from "posthog-js/react";
 
 export default function BlogAndFAQ() {
-  // 👇 Ved klikk på accordion, sender med hvilken seksjon det gjelder
+  const [currentItem, setcurrentItem] = useState<string | undefined>();
+  const shouldOpenAccordion = useFeatureFlagVariantKey("open-faq-flag");
+
+  useEffect(() => {
+    if (shouldOpenAccordion === "test") {
+      setcurrentItem("how-to-fill-form");
+    }
+  }, [shouldOpenAccordion]);
+
   function trackFAQEvent(section: string) {
     posthog.capture("faq_section_clicked", { section });
   }
@@ -106,11 +108,13 @@ export default function BlogAndFAQ() {
             </div>
             <div className="mx-auto max-w-3xl space-y-8 py-12">
               <Accordion
+                value={currentItem}
                 type="single"
                 collapsible
                 className="w-full"
                 // 👇 Tok i bruk funksjonen, og sender med value per AccordionItem
                 onValueChange={(value) => {
+                  setcurrentItem(value);
                   trackFAQEvent(value);
                 }}
               >

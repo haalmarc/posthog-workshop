@@ -91,16 +91,10 @@ export default function BlogAndFAQ() {
             </div>
             <div className="mx-auto max-w-3xl space-y-8 py-12">
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="how-to-create-account">
-                  <AccordionTrigger>
-                    How do I create an account?
-                  </AccordionTrigger>
+                <AccordionItem value="how-to-fill-form">
+                  <AccordionTrigger>How do I fill out form?</AccordionTrigger>
                   <AccordionContent>
-                    To create an account, click on the &quot;Sign Up&quot;
-                    button in the top right corner of our website. Fill in your
-                    details in the registration form and submit. You&apos;ll
-                    receive a confirmation email with further instructions to
-                    activate your account.
+                    To fill out form, go to <Link href="/funnel">funnel</Link>.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="accepted-payment-methods">
