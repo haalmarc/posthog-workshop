@@ -158,7 +158,38 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 - https://www.youtube.com/watch?v=2jQco8hEvTI&t=847s&ab_channel=PostHog
 - https://www.bekk.christmas/post/2024/09/forst%C3%A5-produktet-ditt-med-posthog-hypoteser
 
+## Session replay
+
+### Oppgave 5a - Session replay
+
+👉 Oppgave: Spill av et opptak fra en tidligere sesjon
+
+💡 Refleksjon:
+
+- Hvordan vite hvilke sesjoner som er relevante for deg?
+- Hvordan få se en sesjon når en feil oppstår?
+- Hvordan kan du filtrere bort sensitiv informasjon fra opptak?
+
+📖 Lesestoff:
+
+- https://posthog.com/tutorials/session-recordings-for-support
+- https://posthog.com/docs/session-replay/privacy
+
+## Tilbake til oppdrag
+
+Nå har du fullført fem grunnleggende oppgaver for å forstå greia med måling i posthog 🎉
+
+💡 For å ta dette videre, reflektér over følgende:
+
+- Hvordan ikke glemme å jobbe produktnært?
+
+- Hvordan velge oppgaver som gir mest verdi for brukerne?
+
+📖 https://www.bekk.christmas/post/2024/10/forsta-produktet-ditt-med-posthog-fra-innsikt-til-produktbeslutninger
+
 # Ekstra oppgaver
+
+Om du har lyst til å dykke videre i PostHog, her er noen forslag til oppgaver.
 
 ## Identifisér brukeren
 
