@@ -53,6 +53,12 @@ export default function RootLayout({
               >
                 About
               </Link>
+              <Link
+                href="/funnel"
+                className="text-sm font-medium hover:underline underline-offset-4"
+              >
+                Funnel
+              </Link>
             </nav>
           </div>
         </header>
