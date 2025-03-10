@@ -1,10 +1,10 @@
 # Posthog Workshop
 
-Workshop for å lære posthog.
+Workshop for å lære Posthog.
 
 # Oppsett
 
-Legg inn .env-variabler, se .env.local.example. Legg til .env.local
+Legg inn .env-variabler, se .env.local.example. Legg til .env.local. Se oppgave 1a for hvor du finner secrets.
 
 ## Kjør lokalt
 
@@ -128,6 +128,8 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 ## Lag et eksperiment
 
+I FAQ ønsker vi å sjekke om en åpen accordion med lenke til "funnel" fører til flere besøk til "funnel", enn om accordion-en ikke er åpen.
+
 ### Oppgave 4a - Feature flagg
 
 👉 Gå inn på Experiments og opprett nytt eksperiment. Generer samtidig nytt feature flagg
@@ -143,6 +145,8 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 - https://youtu.be/2jQco8hEvTI?si=0946ThlaQu1FN2m_&t=776
 
 ### Oppgave 4b - A/b- test
+
+👉 Ta i bruk flagget i koden, så du kan kontrollere hvem som møter en åpen accordion og ikke.
 
 💡 Refleksjon:
 
@@ -177,13 +181,13 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 ## Tilbake til oppdrag
 
-Nå har du fullført fem grunnleggende oppgaver for å forstå greia med måling i posthog 🎉
+Nå har du fullført fem grunnleggende oppgaver for å forstå greia med måling i Posthog 🎉
 
 💡 For å ta dette videre, reflektér over følgende:
 
-- Hvordan ikke glemme å jobbe produktnært?
+- Hvordan sørge for at du jevnlig jobber produktnært?
 
-- Hvordan velge oppgaver som gir mest verdi for brukerne?
+- Hvordan velge oppgavene som gir mest verdi for brukerne?
 
 📖 https://www.bekk.christmas/post/2024/10/forsta-produktet-ditt-med-posthog-fra-innsikt-til-produktbeslutninger
 
