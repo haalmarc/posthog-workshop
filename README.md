@@ -117,7 +117,7 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 ![Screenshot workshop](./images/dashboard.png)
 
-👉 Legg inn dashboardene du lagde i oppgave 2 inn på et nytt dashboard
+👉 Legg inn innsiktene du lagde i oppgave 2 inn på et nytt dashboard
 
 💡 Refleksjon:
 
