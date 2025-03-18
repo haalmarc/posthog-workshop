@@ -1,10 +1,15 @@
 # Posthog Workshop
 
-Workshop for å lære Posthog.
+Velkommen til en workshop i Posthog! Nedover følger både kodeoppgaver og oppgaver innpå Posthog-dashboardet.
 
-# Oppsett
+Etter workshopen vil du ha en bedre forståelse for funksjonaliteten Posthog tilbyr, og hvordan du kan bruke måleverktøy til å lage riktig ting.
 
-Legg inn .env-variabler, se .env.local.example. Legg til .env.local. Se oppgave 1a for hvor du finner secrets.
+<details>
+  <summary>Raskt oppsett</summary>
+
+Her er raskt oppsett, om du allerede har gjort oppgavene. Se oppgave 1a for mer detaljer.
+
+Legg inn .env-variabler, se .env.local.example. Legg til .env.local.
 
 ## Kjør lokalt
 
@@ -22,47 +27,64 @@ pnpm dev
 
 Åpne [http://localhost:3000](http://localhost:3000).
 
+</details>
+
 # Oppgaver
 
 ## Oppgave 1 - Lag ditt første event
 
-I denne oppgaven setter vi opp posthog og du lager ditt første event.
+I denne oppgaven lærer du hvordan du setter opp Posthog og lager ditt første event. Når du er ferdig, skal du kunne se dine egne eventer i Posthog-dashboardet.
 
 ### Oppgave 1a Oppsett
 
 ![Screenshot workshop](./images/signup.png)
 
-Start med å klone repository. Så trenger du å legge inn PostHog- secrets. Da trenger du først en konto.
+Start med å klone repository.
 
-Gå inn på https://eu.posthog.com/signup og opprett en organisasjon, f.eks. "Hobby org".
+Gå inn på https://eu.posthog.com/signup, opprett en bruker og en organisasjon, for eksempel "Hobby org".
 
 Så huk av for "Product analysis", og trykk "Get started".
 
-Trykk så inn på guide for "Nextjs", om det ikke allerede er gjort. Dette første steget med å sette opp provider har vi allerede ordnet for deg, se `PosthogProvider.tsx`. Men du kan gjerne lese gjennom for å forstå hva som foregår.
+![Screenshot workshop](./images/products_signup.png)
 
-På denne første siden ser du også secrets for ditt posthog-prosjekt. Om du senere lurer på hvor de er, ta en titt på "Settings".
+Trykk så inn på guide for "Next.js", om det ikke allerede er standardvalget. Dra secrets inn i `.env.local`.
 
-👉 Oppgave: Før du trykker deg videre på oppsett-siden, gjør følgende: Legg secrets inn på fil `env.local`, kjør opp prosjektet og trykk litt rundt.
+Vi har allerede initiert prosjektet med en `PostHogProvider.tsx`, se filen. Men du kan gjerne lese gjennom for å forstå hva som foregår.
 
-Når "Verify installation" er good, kan du trykke videre til "Continue".
+For å fullføre oppsettet, kan du fyre opp prosjektet:
 
-👉 Oppgave: Du kan konfigurere ting som om du vil ha på ting som autocapture og heatmaps. La alt unntatt autocapture være på. Vi kommer heller til å bruke manuelt event.
+```
+pnpm install && pnpm dev
+```
+
+Så trykk deg rundt på siden. Om alt er rett, skal "Verify installation" være sjekket av, og du kan trykke "Continue".
+
+![Screenshot workshop](./images/verify_signup.png)
+
+For konfigurasjon av hvilke valg du vil ha med, huk av alt unntatt autocapture. Vi kommer heller til å bruke manuelt event.
+
+![Screenshot workshop](./images/config_signup.png)
+
+Skipp over linked data.
+
+Velg gratis plan.
+
+Avslutt, uten å invitere teammedlemmer 🥲
+
+🎉 Hurra! Du har kommet deg gjennom masse config! I neste oppgave skal vi gjøre noe så gøy som å tracke ditt første event!
 
 💡 Refleksjon: Hvorfor bruke manuelle events istedenfor automatiske?
 
 📖 https://posthog.com/tutorials/event-tracking-guide#autocaptures-limitations
 
-👉 Oppgave: Bruk gratis plan og hopp over å invitere teammedlemmer.
-
-🎉 Du har nå satt opp Posthog. I Posthog-dashboardet, trykk deg inn på "Web analytics" og se om du har en session replay å titte på.
-
 ### Oppgave 1b - Ditt første event
 
 ![Screenshot workshop](./images/first_click.png)
 
-Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer.
+👉 Oppgave: Track hvilke FAQ- spørsmål som brukere åpner.
 
-👉 Oppgave: Track hvilke FAQ- spørsmål som brukere åpner. For å se om eventet har blitt sendt, kan du trykke inn på fanen "Activity".
+- Legg til manuelt event på FAQ-spørsmål
+- Sjekk fanen "Activity" for om eventet blir registrert
 
 📖 https://posthog.com/docs/getting-started/send-events
 
@@ -72,11 +94,22 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 📖 https://posthog.com/tutorials/next-steps-after-installing#1-configure-event-capture
 
+💡 Refleksjon:
+
 - Hva må du gjøre annerledes om du vil tracke fra en serverkomponent versus klientkomponent?
 
 📖 https://vercel.com/guides/posthog-nextjs-vercel-feature-flags-analytics#3.-using-posthog-with-react-server-components
 
+<details>
+  <summary>Løsning 1b</summary>
+
+Se `oppgave1b.fasit.tsx`.
+
+</details>
+
 ## Oppgave 2 - Visualiser innsikt
+
+I denne oppgaven lærer du hvordan du kan visualisere innsikt i PostHog ved å bruke trender og funnels. Dette er viktig for å forstå brukerens atferd og finne forbedringsmuligheter i produktet ditt.
 
 ### Oppgave 2a - Trender
 
@@ -84,7 +117,10 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 👉 Oppgave: Legg til en trend-annotasjon.
 
-💡 Refleksjon: Hva er vits med å lage trender?
+💡 Refleksjon:
+
+- Hva er vits med å følge med på trender?
+- Hvorfor bruke annotasjoner på trender?
 
 📖 https://www.bekk.christmas/post/2024/07/forsta-produktet-ditt-med-posthog-lag-innsikt-ut-av-malingene
 
@@ -92,14 +128,18 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 ![Screenshot workshop](./images/funnel.png)
 
-👉 Oppgave: Sett opp en funnel for skjemaet du finner oppe i høyre hjørne på nettsiden.
+👉 Oppgave: Finn ut hvor brukeren dropper av i skjemaet
 
+- Skjemaet finner du i navbar, ved å trykke på "Funnel"
 - I koden, legg inn et event per spørsmål i skjemaet
 - I dashboard, legg inn action per steg
 
 <details>
-  <summary>Løsning dashboard</summary>
+  <summary>Løsning 2b</summary>
 
+Kode: Se `oppgave2b.fasit.tsx`.
+
+Dashboard:
 ![Screenshot workshop](./images/funnel_solution.png)
 
 </details>
@@ -113,6 +153,8 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 ## Lag et dashboard
 
+I denne oppgaven lærer du hvordan du kan samle innsikt i et dashboard i PostHog for å gjøre analyser mer oversiktlige og tilgjengelige.
+
 ### Oppgave 3a - Lag et dashboard
 
 ![Screenshot workshop](./images/dashboard.png)
@@ -121,28 +163,29 @@ Nå som vi har satt opp Posthog, er det lekende lett å tracke brukerens eventer
 
 💡 Refleksjon:
 
-- Hva er gode praksiser så dashboardet blir oversiktlig?
+- Hva er gode praksiser for å gjøre dashboardet oversiktlig?
 - Om dette var et dashboard for ditt oppdrag, hva hadde du ønsket å ha med?
 
 📖 https://www.bekk.christmas/post/2024/08/forsta-produktet-ditt-med-posthog-samle-innsikt-i-produkt-dashboard
 
 ## Lag et eksperiment
 
-I FAQ ønsker vi å sjekke om en åpen accordion med lenke til "funnel" fører til flere besøk til "funnel", enn om accordion-en ikke er åpen.
+I denne oppgaven lærer du hvordan du kan sette opp og gjennomføre et eksperiment i PostHog ved hjelp av feature flags og A/B-testing.
+
+Du skal teste om en åpen accordion med en lenke til "funnel" fører til flere besøk enn en lukket accordion.
 
 ### Oppgave 4a - Feature flagg
 
-👉 Gå inn på Experiments og opprett nytt eksperiment. Generer samtidig nytt feature flagg
+👉 Gå inn på Experiments og opprett nytt eksperiment. Generer samtidig et nytt feature flagg.
 
 💡 Refleksjon:
 
 - Hva har eksperimenter med feature flags å gjøre?
 - Hvordan ville du ha lagt til et feature flagg som kun én person kunne se?
 
-📖 Lesestoff:
+📖 https://posthog.com/docs/experiments/creating-an-experiment
 
-- https://posthog.com/docs/experiments/creating-an-experiment
-- https://youtu.be/2jQco8hEvTI?si=0946ThlaQu1FN2m_&t=776
+📖 https://youtu.be/2jQco8hEvTI?si=0946ThlaQu1FN2m_&t=776
 
 ### Oppgave 4b - A/b- test
 
@@ -154,17 +197,20 @@ I FAQ ønsker vi å sjekke om en åpen accordion med lenke til "funnel" fører t
 - Hvilke eksperimenter kan du gjøre på eget oppdrag?
 
 📖 https://www.bekk.christmas/post/2024/09/forst%C3%A5-produktet-ditt-med-posthog-hypoteser
+📖 https://www.youtube.com/watch?v=2jQco8hEvTI&t=847s&ab_channel=PostHog
 
-### Oppgave 4b - A/b- testing
+<details>
+  <summary>Løsning 4b</summary>
 
-📖 Lesestoff:
+Kode: Se `oppgave4b.fasit.tsx`.
 
-- https://www.youtube.com/watch?v=2jQco8hEvTI&t=847s&ab_channel=PostHog
-- https://www.bekk.christmas/post/2024/09/forst%C3%A5-produktet-ditt-med-posthog-hypoteser
+</details>
 
 ## Session replay
 
-### Oppgave 5a - Session replay
+I denne oppgaven lærer du hvordan du kan bruke Session Replay i PostHog for å se opptak av brukerøkter og analysere brukeradferd.
+
+### Oppgave 5 - Session replay
 
 👉 Oppgave: Spill av et opptak fra en tidligere sesjon
 
@@ -174,14 +220,14 @@ I FAQ ønsker vi å sjekke om en åpen accordion med lenke til "funnel" fører t
 - Hvordan få se en sesjon når en feil oppstår?
 - Hvordan kan du filtrere bort sensitiv informasjon fra opptak?
 
-📖 Lesestoff:
-
-- https://posthog.com/tutorials/session-recordings-for-support
-- https://posthog.com/docs/session-replay/privacy
+📖 https://posthog.com/tutorials/session-recordings-for-support
+📖 https://posthog.com/docs/session-replay/privacy
 
 ## Tilbake til oppdrag
 
-Nå har du fullført fem grunnleggende oppgaver for å forstå greia med måling i Posthog 🎉
+Nå har du fullført fem grunnleggende oppgaver for å forstå greia med måling i Posthog 🎉 Hvordan ta dette videre?
+
+### Oppgave 6 - Tilbake til oppdrag
 
 💡 For å ta dette videre, reflektér over følgende:
 
@@ -206,3 +252,9 @@ Om du ikke vil lagre brukerens info i cookies, kan du flytte lagringen. Prøv de
 ## Test med posthog
 
 Lag en test med Jest og Posthog: https://posthog.com/tutorials/test-frontend-feature-flags
+
+# Innspill
+
+Takk for at du deltok i workshopen!
+
+Om du finner feil i oppgave eller tekst, eller bare har forbedringer, bare å ta kontakt med meg eller lag en PR.
