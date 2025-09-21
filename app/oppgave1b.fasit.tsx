@@ -68,21 +68,21 @@ export default function BlogAndFAQ() {
                 description="Learn the basics of HTML, CSS, and JavaScript to kickstart your web development journey."
                 date="May 15, 2023"
                 category="Development"
-                image="/placeholder.svg?height=200&width=400"
+                image="/firefly1.jpg?height=200&width=400"
               />
               <BlogPostCard
                 title="The Future of AI in Business"
                 description="Discover how artificial intelligence is transforming businesses across various industries."
                 date="June 22, 2023"
                 category="Technology"
-                image="/placeholder.svg?height=200&width=400"
+                image="/firefly2.jpg?height=200&width=400"
               />
               <BlogPostCard
                 title="Responsive Design Best Practices"
                 description="Ensure your website looks great on all devices with these responsive design techniques."
                 date="July 8, 2023"
                 category="Design"
-                image="/placeholder.svg?height=200&width=400"
+                image="/firefly3.jpg?height=200&width=400"
               />
             </div>
             <div className="flex justify-center">

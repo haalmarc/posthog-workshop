@@ -52,7 +52,7 @@ export default function AboutPage() {
               </div>
               <div className="relative aspect-video overflow-hidden rounded-xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/firefly4.jpg?height=400&width=600"
                   alt="Our office"
                   fill
                   className="object-cover"
@@ -132,25 +132,25 @@ export default function AboutPage() {
               <TeamMember
                 name="Anna Johnson"
                 role="CEO & Founder"
-                image="/placeholder.svg?height=300&width=300"
+                image="/woman1.jpg?height=300&width=300"
                 bio="Anna founded YourBrand with a vision to transform the industry. With over 15 years of experience, she leads our strategic direction."
               />
               <TeamMember
                 name="Michael Chen"
                 role="CTO"
-                image="/placeholder.svg?height=300&width=300"
+                image="/man1.jpg?height=300&width=300"
                 bio="Michael oversees all technical aspects of the company. His innovative approach has been instrumental in our product development."
               />
               <TeamMember
                 name="Sarah Williams"
                 role="Design Director"
-                image="/placeholder.svg?height=300&width=300"
+                image="/woman2.jpg?height=300&width=300"
                 bio="Sarah brings creativity and user-centered thinking to everything we do. She ensures our products are both beautiful and functional."
               />
               <TeamMember
                 name="David Okonkwo"
                 role="Head of Marketing"
-                image="/placeholder.svg?height=300&width=300"
+                image="/man2.jpg?height=300&width=300"
                 bio="David leads our marketing efforts with a data-driven approach. He's passionate about sharing our story with the world."
               />
             </div>
