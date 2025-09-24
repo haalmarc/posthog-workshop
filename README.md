@@ -111,6 +111,15 @@ Se `oppgave1b.fasit.tsx`.
 
 I denne oppgaven lærer du hvordan du kan visualisere innsikt i PostHog ved å bruke trender og funnels. Dette er viktig for å forstå brukerens atferd og finne forbedringsmuligheter i produktet ditt.
 
+### Oppgave 2a(LA) - Stolpediagram
+Nå har du laget ditt eget event, men det er ikke så mye å lage visualseringer av ennå. Et mer realistisk tilfelle er at du har mange brukere, der noen av dem klikker på en eller flere FAQ. For å simulere dette var vi lagt inn et script, `testdata/faq-testdata.mjs`, som legger inn data for noen brukere de siste 7 dager. Her er oppgaven:
+1. Endre funksjonen `getRandomFAQEvent` i test-scriptet `testdata/faq-testdata.mjs` til å generere eventer som tilsvarer det du lagde i oppgave 1b.
+2. Kjør scriptet: `npm run testdata:faq`
+3. Verifiser at du har fått inn historiske data i Activity-fanen i PostHog
+4. Lag en ny Product Insight, et stolpediagram over hvilke FAQ som blir trykket på. (må forklare dette mer, med skjermbilder osv)
+
+Lag et stolpediagram, eller noe annet, for å vise hvilken FAQ som var mest populær.
+
 ### Oppgave 2a - Trender
 
 ![Screenshot workshop](./images/trend.png)
@@ -150,6 +159,11 @@ Dashboard:
 - Hvordan kan du bruke funnels sammen med retention?
 
 📖 https://www.youtube.com/watch?v=2jQco8hEvTI&t=573s&ab_channel=PostHog
+
+### Oppgave 2c (LA) - legg inn data i funnel 
+1. Endre scriptet `testdata/testdata-funnel.mjs` til å generere like eventer som det du lagde i 2b.
+2. Kjør scriptet `npm run testdata:funnel`. Det lages data for de 7 siste dagene.
+3. Bruk funnelen til å finne steget der flest faller fra.
 
 ## Lag et dashboard
 

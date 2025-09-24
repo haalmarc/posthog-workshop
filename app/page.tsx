@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,8 +16,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import posthog from "posthog-js";
 
 export default function BlogAndFAQ() {
+  const trackFAQClick = (section: string) => posthog.capture("faq_click", {section});
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
@@ -90,7 +94,15 @@ export default function BlogAndFAQ() {
               </div>
             </div>
             <div className="mx-auto max-w-3xl space-y-8 py-12">
-              <Accordion type="single" collapsible className="w-full">
+              <Accordion
+                  type="single"
+                  collapsible
+                  className="w-full"
+                  // 👇 Tok i bruk funksjonen, og sender med value per AccordionItem
+                  onValueChange={(value) => {
+                    trackFAQClick(value);
+                  }}
+              >
                 <AccordionItem value="how-to-fill-form">
                   <AccordionTrigger>How do I fill out form?</AccordionTrigger>
                   <AccordionContent>
@@ -203,7 +215,7 @@ function BlogPostCard({
     <Card className="overflow-hidden">
       <div className="aspect-video w-full overflow-hidden">
         <Image
-          src={image || "/placeholder.svg"}
+          src={image || "/placeholder.png"}
           alt={title}
           width={400}
           height={200}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { ArrowRight, Trophy } from "lucide-react";
 import Link from "next/link";
+import posthog from "posthog-js";
 
 export default function FunnelPage() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -60,8 +61,23 @@ export default function FunnelPage() {
     },
   ];
 
+  function trackFunnelStep(step: number) {
+    // Tracking each next step in the funnel
+    console.log("funnel_section_clicked", { step });
+    posthog.capture("funnel_section_clicked", { step });
+  }
+
+  useEffect(() => {
+    console.log("Current step:", currentStep, currentStep === 0);
+    if (currentStep === 0) {
+      // To track first reload
+      trackFunnelStep(0);
+    }
+  }, [currentStep]);
+
   const handleNext = () => {
     if (currentStep < questions.length - 1) {
+      trackFunnelStep(currentStep + 1);
       setCurrentStep(currentStep + 1);
     } else {
       // Calculate prize based on answers
