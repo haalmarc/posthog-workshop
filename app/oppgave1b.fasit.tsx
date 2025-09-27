@@ -26,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import posthog from "posthog-js";
 
 export default function BlogAndFAQ() {
-  // 👇 Ved klikk på accordion, sender med hvilken seksjon det gjelder
+  // 💡 Ved klikk på accordion, sender med hvilken seksjon det gjelder
   function trackFAQEvent(section: string) {
     posthog.capture("faq_section_clicked", { section });
   }
@@ -109,7 +109,7 @@ export default function BlogAndFAQ() {
                 type="single"
                 collapsible
                 className="w-full"
-                // 👇 Tok i bruk funksjonen, og sender med value per AccordionItem
+                // 💡 Tar i bruk funksjonen, og sender med value per AccordionItem
                 onValueChange={(value) => {
                   trackFAQEvent(value);
                 }}

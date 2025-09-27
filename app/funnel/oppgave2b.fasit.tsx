@@ -62,49 +62,42 @@ export default function FunnelPage() {
   ];
 
   /* 
-    👇 I dette tilfellet, kan vi la første steget være at 
-    brukeren er på url /funnel, uten behov for denne koden.
+    💡 Tracker første lasting med en useEffect.
     
-    Om vi andre ganger ønsker å sjekke for at en viss handling er gjort,
-    kan vi sjekke det for eksempel med en useEffect.
+    Alternative kunne vi også latt 
+    PostHog automatisk registrere sidebesøket til /funnel som første steg,
+    uten bruk av en useEffect.
+    
   */
   useEffect(() => {
-    console.log("Current step:", currentStep, currentStep === 0);
     if (currentStep === 0) {
-      // To track first reload
+      // 💡 To track first reload
       trackFunnelStep(0);
     }
   }, [currentStep]);
 
-  // 👇 Tracker event
+  // 💡 Tracker event
   function trackFunnelStep(step: number) {
-    // Tracking each next step in the funnel
     posthog.capture("funnel_section_clicked", { step });
   }
 
   const handleNext = () => {
-    // 👇 Når "Neste"-knappen trykkes, sender vi også event
+    // 💡 Når "Neste"-knappen trykkes, sender vi også event
     trackFunnelStep(currentStep + 1);
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      // Calculate prize based on answers
       calculatePrize();
       setShowResult(true);
     }
   };
 
   const calculatePrize = () => {
-    // Example logic: if they chose pizza and summer, they get 100kr
     if (answers[0] === "pizza" && answers[1] === "sommer") {
       setPrize(100);
-    }
-    // If they chose taco and winter, they get 75kr
-    else if (answers[0] === "taco" && answers[1] === "vinter") {
+    } else if (answers[0] === "taco" && answers[1] === "vinter") {
       setPrize(75);
-    }
-    // Default prize
-    else {
+    } else {
       setPrize(50);
     }
   };

@@ -1,13 +1,13 @@
 # Posthog Workshop
 
-Velkommen til en workshop i Posthog! Nedover følger både kodeoppgaver og oppgaver innpå Posthog-dashboardet.
+Velkommen til en workshop i PostHog! 
 
-Etter workshopen vil du ha en bedre forståelse for funksjonaliteten Posthog tilbyr, og hvordan du kan bruke måleverktøy til å lage riktig ting.
+Etter workshopen vil du ha en bedre forståelse for funksjonaliteten PostHog tilbyr, og hvordan du kan bruke måleverktøy til å lage riktig ting.
 
 <details>
-  <summary>Raskt oppsett</summary>
+  <summary>Oppsett for kodeprosjektet</summary>
 
-Her er raskt oppsett, om du allerede har gjort oppgavene. Se oppgave 1a for mer detaljer.
+Her er oppsett for kode. Det forutsetter at du allerede har gjort oppgave 1a, hvor du får miljøvariabler.
 
 Legg inn .env-variabler, se .env.local.example. Legg til .env.local.
 
@@ -30,6 +30,14 @@ pnpm dev
 </details>
 
 # Oppgaver
+
+Nedover følger oppgaver både i koden og innpå PostHog-prosjektet.
+
+Ulike emojies betyr ulike ting:
+- 👉 Oppgaven du skal gjøre, enten i kode eller i PostHog-prosjektet. På noen av oppgavene er det også fasit, som `oppgave1b.fasit.tsx`. Det gjelder ikke alle, ettersom det også er i PostHog-prosjektet.
+- 💭 Refleksjonsspørsmål uten fasit. Oppfordrer å reflektere over dette, gjerne med et blikk i foreslått kilde.
+- 📖 Litteratur-tips. Ofte en lenke til en nyttig bloggpost eller video. Kan hjelpe deg med oppgaven eller refleksjonsspørsmålet.
+- 💡 Løsning i fasit. Poengtert ut hva løsningsforslaget i fasit er.
 
 ## Oppgave 1 - Lag ditt første event
 
@@ -73,7 +81,7 @@ Avslutt, uten å invitere teammedlemmer 🥲
 
 🎉 Hurra! Du har kommet deg gjennom masse config! I neste oppgave skal vi gjøre noe så gøy som å tracke ditt første event!
 
-💡 Refleksjon: Hvorfor bruke manuelle events istedenfor automatiske?
+💭 Refleksjon: Hvorfor bruke manuelle events istedenfor automatiske?
 
 📖 https://posthog.com/tutorials/event-tracking-guide#autocaptures-limitations
 
@@ -82,20 +90,17 @@ Avslutt, uten å invitere teammedlemmer 🥲
 ![Screenshot workshop](./images/first_click.png)
 
 👉 Oppgave: Track hvilke FAQ- spørsmål som brukere åpner.
-
-- Legg til manuelt event på FAQ-spørsmål
-- Sjekk fanen "Activity" for om eventet blir registrert
+- I koden, legg til manuelt event på FAQ-spørsmål. Se `page.tsx`.
+- I PostHog, sjekk fanen "Activity" for om eventet blir registrert.
 
 📖 https://posthog.com/docs/getting-started/send-events
 
-💡 Refleksjon:
-
+💭 Refleksjon:
 - Hvilke events bør du minimum tracke?
 
 📖 https://posthog.com/tutorials/next-steps-after-installing#1-configure-event-capture
 
-💡 Refleksjon:
-
+💭 Refleksjon:
 - Hva må du gjøre annerledes om du vil tracke fra en serverkomponent versus klientkomponent?
 
 📖 https://vercel.com/guides/posthog-nextjs-vercel-feature-flags-analytics#3.-using-posthog-with-react-server-components
@@ -117,7 +122,7 @@ I denne oppgaven lærer du hvordan du kan visualisere innsikt i PostHog ved å b
 
 👉 Oppgave: Legg til en trend-annotasjon.
 
-💡 Refleksjon:
+💭 Refleksjon:
 
 - Hva er vits med å følge med på trender?
 - Hvorfor bruke annotasjoner på trender?
@@ -129,10 +134,9 @@ I denne oppgaven lærer du hvordan du kan visualisere innsikt i PostHog ved å b
 ![Screenshot workshop](./images/funnel.png)
 
 👉 Oppgave: Finn ut hvor brukeren dropper av i skjemaet
-
 - Skjemaet finner du i navbar, ved å trykke på "Funnel"
 - I koden, legg inn et event per spørsmål i skjemaet
-- I dashboard, legg inn action per steg
+- I PostHog, legg inn action per steg
 
 <details>
   <summary>Løsning 2b</summary>
@@ -144,8 +148,7 @@ Dashboard:
 
 </details>
 
-💡 Refleksjon:
-
+💭 Refleksjon:
 - Om du ser dropp i prosenter per steg, hva er det tegn på - og hva kan du eventuelt gjøre med det?
 - Hvordan kan du bruke funnels sammen med retention?
 
@@ -161,8 +164,7 @@ I denne oppgaven lærer du hvordan du kan samle innsikt i et dashboard i PostHog
 
 👉 Legg inn innsiktene du lagde i oppgave 2 inn på et nytt dashboard
 
-💡 Refleksjon:
-
+💭 Refleksjon:
 - Hva er gode praksiser for å gjøre dashboardet oversiktlig?
 - Om dette var et dashboard for ditt oppdrag, hva hadde du ønsket å ha med?
 
@@ -178,7 +180,7 @@ Du skal teste om en åpen accordion med en lenke til "funnel" fører til flere b
 
 👉 Gå inn på Experiments og opprett nytt eksperiment. Generer samtidig et nytt feature flagg.
 
-💡 Refleksjon:
+💭 Refleksjon:
 
 - Hva har eksperimenter med feature flags å gjøre?
 - Hvordan ville du ha lagt til et feature flagg som kun én person kunne se?
@@ -191,7 +193,7 @@ Du skal teste om en åpen accordion med en lenke til "funnel" fører til flere b
 
 👉 Ta i bruk flagget i koden, så du kan kontrollere hvem som møter en åpen accordion og ikke.
 
-💡 Refleksjon:
+💭 Refleksjon:
 
 - Hvordan kan du være sikker på at en åpen accordion faktisk genererer flere besøk til /funnel?
 - Hvilke eksperimenter kan du gjøre på eget oppdrag?
@@ -214,8 +216,7 @@ I denne oppgaven lærer du hvordan du kan bruke Session Replay i PostHog for å 
 
 👉 Oppgave: Spill av et opptak fra en tidligere sesjon
 
-💡 Refleksjon:
-
+💭 Refleksjon:
 - Hvordan vite hvilke sesjoner som er relevante for deg?
 - Hvordan få se en sesjon når en feil oppstår?
 - Hvordan kan du filtrere bort sensitiv informasjon fra opptak?
@@ -229,10 +230,8 @@ Nå har du fullført fem grunnleggende oppgaver for å forstå greia med måling
 
 ### Oppgave 6 - Tilbake til oppdrag
 
-💡 For å ta dette videre, reflektér over følgende:
-
+💭 For å ta dette videre, reflektér over følgende:
 - Hvordan sørge for at du jevnlig jobber produktnært?
-
 - Hvordan velge oppgavene som gir mest verdi for brukerne?
 
 📖 https://www.bekk.christmas/post/2024/10/forsta-produktet-ditt-med-posthog-fra-innsikt-til-produktbeslutninger

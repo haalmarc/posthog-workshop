@@ -64,23 +64,17 @@ export default function FunnelPage() {
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      // Calculate prize based on answers
       calculatePrize();
       setShowResult(true);
     }
   };
 
   const calculatePrize = () => {
-    // Example logic: if they chose pizza and summer, they get 100kr
     if (answers[0] === "pizza" && answers[1] === "sommer") {
       setPrize(100);
-    }
-    // If they chose taco and winter, they get 75kr
-    else if (answers[0] === "taco" && answers[1] === "vinter") {
+    } else if (answers[0] === "taco" && answers[1] === "vinter") {
       setPrize(75);
-    }
-    // Default prize
-    else {
+    } else {
       setPrize(50);
     }
   };

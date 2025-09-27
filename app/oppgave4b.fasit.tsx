@@ -21,8 +21,10 @@ import { useFeatureFlagVariantKey } from "posthog-js/react";
 
 export default function BlogAndFAQ() {
   const [currentItem, setcurrentItem] = useState<string | undefined>();
+  // 💡 Tar i bruk feature-flagg
   const shouldOpenAccordion = useFeatureFlagVariantKey("open-faq-flag");
 
+  // 💡 Åpner accordion om feature-flagg er aktivt
   useEffect(() => {
     if (shouldOpenAccordion === "test") {
       setcurrentItem("how-to-fill-form");
@@ -112,7 +114,7 @@ export default function BlogAndFAQ() {
                 type="single"
                 collapsible
                 className="w-full"
-                // 👇 Tok i bruk funksjonen, og sender med value per AccordionItem
+                // 💡 Tar i bruk setCurrentItem, for å holde rede på hva som er åpent
                 onValueChange={(value) => {
                   setcurrentItem(value);
                   trackFAQEvent(value);
