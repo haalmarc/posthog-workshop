@@ -123,7 +123,6 @@ I denne oppgaven lærer du hvordan du kan visualisere innsikt i PostHog ved å b
 👉 Oppgave: Legg til en trend-annotasjon.
 
 💭 Refleksjon:
-
 - Hva er vits med å følge med på trender?
 - Hvorfor bruke annotasjoner på trender?
 
@@ -134,8 +133,8 @@ I denne oppgaven lærer du hvordan du kan visualisere innsikt i PostHog ved å b
 ![Screenshot workshop](./images/funnel.png)
 
 👉 Oppgave: Finn ut hvor brukeren dropper av i skjemaet
-- Skjemaet finner du i navbar, ved å trykke på "Funnel"
-- I koden, legg inn et event per spørsmål i skjemaet
+- Skjemaet kan du navigere deg til via navbar og trykke på "Funnel"
+- I koden, legg inn et event per spørsmål i skjemaet. Koden finner du i `/funnel/page.tsx`.
 - I PostHog, legg inn action per steg
 
 <details>
@@ -192,6 +191,7 @@ Du skal teste om en åpen accordion med en lenke til "funnel" fører til flere b
 ### Oppgave 4b - A/b- test
 
 👉 Ta i bruk flagget i koden, så du kan kontrollere hvem som møter en åpen accordion og ikke.
+- Endre koden i `page.tsx`.
 
 💭 Refleksjon:
 

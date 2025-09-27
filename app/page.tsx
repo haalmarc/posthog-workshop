@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -16,6 +18,11 @@ import {
 import { Button } from "@/components/ui/button";
 
 export default function BlogAndFAQ() {
+  function trackFAQEvent(section: string) {
+    // 👉 TODO: Oppgave 1b: Send event til PostHog
+    console.log("FAQ section clicked:", section);
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
@@ -90,7 +97,12 @@ export default function BlogAndFAQ() {
               </div>
             </div>
             <div className="mx-auto max-w-3xl space-y-8 py-12">
-              <Accordion type="single" collapsible className="w-full">
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full"
+                onValueChange={(value) => trackFAQEvent(value)}
+              >
                 <AccordionItem value="how-to-fill-form">
                   <AccordionTrigger>How do I fill out form?</AccordionTrigger>
                   <AccordionContent>

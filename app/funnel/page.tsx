@@ -61,6 +61,7 @@ export default function FunnelPage() {
   ];
 
   const handleNext = () => {
+    // 👉 TODO: Oppgave 2b: Track stegene i skjemaet
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
