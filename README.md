@@ -121,6 +121,7 @@ I denne oppgaven lærer du hvordan du kan visualisere innsikt i PostHog ved å b
 ![Screenshot workshop](./images/trend.png)
 
 👉 Oppgave: Legg til en trend-annotasjon.
+- Se fanen "Product Analysis"
 
 💭 Refleksjon:
 - Hva er vits med å følge med på trender?
@@ -135,7 +136,7 @@ I denne oppgaven lærer du hvordan du kan visualisere innsikt i PostHog ved å b
 👉 Oppgave: Finn ut hvor brukeren dropper av i skjemaet
 - Skjemaet kan du navigere deg til via navbar og trykke på "Funnel"
 - I koden, legg inn et event per spørsmål i skjemaet. Koden finner du i `/funnel/page.tsx`.
-- I PostHog, legg inn action per steg
+- I PostHog, kan du legge til Funnel også under "Product analysis". Legg inn action per steg
 
 <details>
   <summary>Løsning 2b</summary>
@@ -177,7 +178,7 @@ Du skal teste om en åpen accordion med en lenke til "funnel" fører til flere b
 
 ### Oppgave 4a - Feature flagg
 
-👉 Gå inn på Experiments og opprett nytt eksperiment. Generer samtidig et nytt feature flagg.
+👉 Gå inn på Experiments og opprett et nytt eksperiment. Generer samtidig et nytt feature flagg.
 
 💭 Refleksjon:
 
@@ -196,7 +197,7 @@ Du skal teste om en åpen accordion med en lenke til "funnel" fører til flere b
 💭 Refleksjon:
 
 - Hvordan kan du være sikker på at en åpen accordion faktisk genererer flere besøk til /funnel?
-- Hvilke eksperimenter kan du gjøre på eget oppdrag?
+- Tenk på hvilke oppgaver du holder på med i oppdrag. Er noen av disse aktuelle for eksperimenter?
 
 📖 https://www.bekk.christmas/post/2024/09/forst%C3%A5-produktet-ditt-med-posthog-hypoteser
 📖 https://www.youtube.com/watch?v=2jQco8hEvTI&t=847s&ab_channel=PostHog
