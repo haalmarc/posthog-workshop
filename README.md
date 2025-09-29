@@ -29,6 +29,37 @@ pnpm dev
 
 </details>
 
+<details>
+  <summary>Problemer med oppsett?</summary>
+
+### Kjør rett node-versjon
+
+Bruk lokal node-versjon, se `nvmrc.rc`:
+
+Last ned versjon: 
+```bash
+nvm install
+```
+
+Ta i bruk: 
+```bash
+nvm use
+```
+
+Alternativt, last ned rett versjon:
+
+
+
+### Last ned pnpm
+
+Du kan bruke npm eller andre kjøre-verktøy. pnpm er erstatning for npm:
+
+```bash
+npm install -g pnpm
+```
+
+</details>
+
 # Oppgaver
 
 Nedover følger oppgaver både i koden og innpå PostHog-prosjektet.
